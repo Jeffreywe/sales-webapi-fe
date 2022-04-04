@@ -17,11 +17,11 @@ export class CustomerListComponent implements OnInit {
 
   ngOnInit(): void {
     this.custsvc.list().subscribe({
-      next: (res) => {
+      next:(res) => {
         this.customers = res;
         console.debug("Customers:", res);
       },
-      error: (err) => {
+      error:(err) => {
         console.error(err);
       }
     });

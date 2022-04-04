@@ -1,5 +1,9 @@
 <app-menu></app-menu>
-<table>
+<div>
+    <span id="pageTitle">Customer List</span> |
+    <a id="create" routerLink="/customer/create">Create new</a>
+</div>
+<table class="table table-sm">
     <thead>
         <tr>
             <th>Id</th>
@@ -17,6 +21,10 @@
             <td>{{(c.active ? "Yes" : "No")}}</td>
             <td>{{c.stateCode}}</td>
             <td>{{c.sales | currency}}</td>
+            <td>
+                <a routerLink="/customer/detail/{{c.id}}">Detail</a> |
+                <a routerLink="/customer/edit/{{c.id}}">Edit</a>
+            </td>
         </tr>
     </tbody>
 </table>

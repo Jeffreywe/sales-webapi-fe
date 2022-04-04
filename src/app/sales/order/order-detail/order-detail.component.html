@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+<span id="pageTitle">Order Detail</span>
+<table *ngIf="order" class="table table-sm">
+    <tr>
+        <th>Id:</th><td><input [(ngModel)]="order.id" type="number" readonly></td>
+    </tr>
+    <tr>
+        <th>Description:</th><td><input [(ngModel)]="order.description" type="string" readonly></td>
+    </tr>
+    <tr>
+        <th>Shipped:</th><td><input [(ngModel)]="order.shipped" type="checkbox" disabled></td>
+    </tr>
+    <tr>
+        <th>Total:</th><td><input [(ngModel)]="order.total" type="number" readonly></td>
+    </tr>
+    <tr>
+        <th>Customer:</th><td><input [(ngModel)]="order.customer.name" type="text" readonly></td>
+    </tr>
+</table>
+<div>
+    <button (click)="remove()" class="btn btn-danger">Delete</button>
+    <span *ngIf="showVerifyButton">
+        | <button (click)="verifyRemove()" class="btn btn-danger">Verify Delete</button>
+    </span>
+    | <a id="back" class="btn btn-secondary" routerLink="/order/list">Back</a>
+</div>

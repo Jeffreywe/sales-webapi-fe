@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+<span id="pageTitle">Edit Order Info</span>
+<table *ngIf="order" class="table table-sm">
+    <tr>
+        <th>Id:</th><td><input [(ngModel)]="order.id" type="number" readonly></td>
+    </tr>
+    <tr>
+        <th>Description:</th><td><input [(ngModel)]="order.description" type="text"></td>
+    </tr>
+    <tr>
+        <th>Shipped:</th><td><input [(ngModel)]="order.shipped" type="checkbox"></td>
+    </tr>
+    <tr>
+        <th>Total:</th><td><input [(ngModel)]="order.total" type="number" disabled></td>
+    </tr>
+    <tr>
+        <th>Customer:</th>
+        <td>
+            <select [(ngModel)]="order.customerId">
+                <option *ngFor="let c of customers" value="{{ c.id }}">{{ c.name }}</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<div>
+    <button (click)="save()" class="btn btn-primary">Save</button>
+    | <a id="back" class="btn btn-secondary" routerLink="/order/list">Back</a>
+</div>

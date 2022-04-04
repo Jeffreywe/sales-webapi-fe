@@ -13,6 +13,10 @@ import { CustomerListComponent } from './sales/customer/customer-list/customer-l
 import { CustomerDetailComponent } from './sales/customer/customer-detail/customer-detail.component';
 import { CustomerCreateComponent } from './sales/customer/customer-create/customer-create.component';
 import { CustomerEditComponent } from './sales/customer/customer-edit/customer-edit.component';
+import { OrderCreateComponent } from './sales/order/order-create/order-create.component';
+import { OrderListComponent } from './sales/order/order-list/order-list.component';
+import { OrderDetailComponent } from './sales/order/order-detail/order-detail.component';
+import { OrderEditComponent } from './sales/order/order-edit/order-edit.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { CustomerEditComponent } from './sales/customer/customer-edit/customer-e
     CustomerListComponent,
     CustomerDetailComponent,
     CustomerCreateComponent,
-    CustomerEditComponent
+    CustomerEditComponent,
+    OrderCreateComponent,
+    OrderListComponent,
+    OrderDetailComponent,
+    OrderEditComponent,
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,

@@ -1,2 +1,23 @@
 <app-menu></app-menu>
-cuscre link
+<span id="pageTitle">Create new Customer</span>
+<table *ngIf="customer" class="table table-sm">
+    <tr>
+        <th>Id:</th><td><input [(ngModel)]="customer.id" type="number" readonly></td>
+    </tr>
+    <tr>
+        <th>Name:</th><td><input [(ngModel)]="customer.name" type="text"></td>
+    </tr>
+    <tr>
+        <th>StateCode:</th><td><input [(ngModel)]="customer.stateCode" type="string"></td>
+    </tr>
+    <tr>
+        <th>Sales:</th><td><input [(ngModel)]="customer.sales" type="number" disabled></td>
+    </tr>
+    <tr>
+        <th>Active:</th><td><input [(ngModel)]="customer.active" type="checkbox"></td>
+    </tr>
+</table>
+<div>
+    <button (click)="save()" class="btn btn-primary">Create</button>
+    | <a id="back" class="btn btn-secondary" routerLink="/customer/list">Back</a>
+</div>
