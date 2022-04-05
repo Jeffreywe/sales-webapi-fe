@@ -2,19 +2,19 @@
 <span id="pageTitle">Order Detail</span>
 <table *ngIf="order" class="table table-sm">
     <tr>
-        <th>Id:</th><td><input [(ngModel)]="order.id" type="number" readonly></td>
+        <th>Id:</th><td><input [(ngModel)]="order.id" type="number" disabled></td>
     </tr>
     <tr>
-        <th>Description:</th><td><input [(ngModel)]="order.description" type="string" readonly></td>
+        <th>Description:</th><td><input [(ngModel)]="order.description" type="string" disabled></td>
     </tr>
     <tr>
         <th>Shipped:</th><td><input [(ngModel)]="order.shipped" type="checkbox" disabled></td>
     </tr>
     <tr>
-        <th>Total:</th><td><input [(ngModel)]="order.total" type="number" readonly></td>
+        <th>Total:</th><td><input [(ngModel)]="order.total" type="number" disabled></td>
     </tr>
     <tr>
-        <th>Customer:</th><td><input [(ngModel)]="order.customer.name" type="text" readonly></td>
+        <th>Customer:</th><td><input [(ngModel)]="order.customer.name" type="text" disabled></td>
     </tr>
 </table>
 <div>

@@ -3,16 +3,16 @@
 <span id="pageTitle">Customer Detail</span>
 <table *ngIf="customer" class="table table-sm">
     <tr>
-        <th>Id:</th><td><input [(ngModel)]="customer.id" type="number" readonly></td>
+        <th>Id:</th><td><input [(ngModel)]="customer.id" type="number" disabled></td>
     </tr>
     <tr>
-        <th>Name:</th><td><input [(ngModel)]="customer.name" type="text" readonly></td>
+        <th>Name:</th><td><input [(ngModel)]="customer.name" type="text" disabled></td>
     </tr>
     <tr>
-        <th>StateCode:</th><td><input [(ngModel)]="customer.stateCode" type="string" readonly></td>
+        <th>StateCode:</th><td><input [(ngModel)]="customer.stateCode" type="string" disabled></td>
     </tr>
     <tr>
-        <th>Sales:</th><td><input [(ngModel)]="customer.sales" type="number" readonly></td>
+        <th>Sales:</th><td><input [(ngModel)]="customer.sales" type="number" disabled></td>
     </tr>
     <tr>
         <th>Active:</th><td><input [(ngModel)]="customer.active" type="checkbox" disabled></td>
